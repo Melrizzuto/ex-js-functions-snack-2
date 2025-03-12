@@ -6,21 +6,23 @@ Poi, definisci la stessa funzione somma ma come funzione anonima assegnata a una
 Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
 
 */
-function somma(num1, num2) {
-    return num1 + num2
-}
 
-console.log(somma(2, 3))
 
-const somma2 = function (num1, num2) {
-    return num1 + num2
-}
+// function somma(num1, num2) {
+//     return num1 + num2
+// }
 
-console.log(somma2(4, 5))
+// console.log(somma(2, 3))
 
-const somma3 = (num1, num2) => num1 + num2
+// const somma2 = function (num1, num2) {
+//     return num1 + num2
+// }
 
-console.log(somma3(6, 2))
+// console.log(somma2(4, 5))
+
+// const somma3 = (num1, num2) => num1 + num2
+
+// console.log(somma3(6, 2))
 
 /*
 
@@ -30,8 +32,8 @@ Crea una arrow function che calcola il quadrato di un numero.
 Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
 */
 
-const quadrato = (num) => num * num
-console.log(quadrato(5))
+// const quadrato = (num) => num * num
+// console.log(quadrato(5))
 
 /*
 🏆 Snack 3
@@ -41,22 +43,22 @@ Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e 
 Esempio d’uso:
 const somma = (a, b) => a + b;
 const moltiplica = (a, b) => a * b;
-​
+
 const eseguiOperazione = (a, b, operazione) => operazione(a, b);
-​
+
 console.log(eseguiOperazione(3, 4, somma)); // 7
 console.log(eseguiOperazione(3, 4, moltiplica)); // 12
 */
 
-function eseguiOperazione(num1, num2, operatore) {
-    return operatore(num1, num2)
-}
+// function eseguiOperazione(num1, num2, operatore) {
+//     return operatore(num1, num2)
+// }
 
-const sottrazione = (num1, num2) => num1 - num2
-const divisione = (num1, num2) => num1 / num2
+// const sottrazione = (num1, num2) => num1 - num2
+// const divisione = (num1, num2) => num1 / num2
 
-console.log(eseguiOperazione(8, 2, sottrazione))
-console.log(eseguiOperazione(9, 3, divisione))
+// console.log(eseguiOperazione(8, 2, sottrazione))
+// console.log(eseguiOperazione(9, 3, divisione))
 
 /*
 
@@ -65,11 +67,15 @@ Crea un generatore di funzioni creaTimer
 Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
 */
 // function creaTimer(time) {
-//     return setTimeout(() => {
+//     return () => {
+//         setTimeout(() => {
 //         console.log(`"Tempo scaduto!"`)
-//     }, time)
-// }
-// creaTimer(2000)
+//     }, time);
+//}
+// };
+//
+// const time2s = creaTimer(2000);
+// time2s();
 
 /*
 🏆 Snack 5
@@ -144,21 +150,21 @@ Output atteso:
 Tempo scaduto!
 */
 
-function contoAllaRovescia(num) {
-    let contatore = num;
+// function contoAllaRovescia(num) {
+//     let contatore = num;
 
-    const intervalId = setInterval(() => {
-        console.log(contatore);
-        contatore--;
+//     const intervalId = setInterval(() => {
+//         console.log(contatore);
+//         contatore--;
 
-        if (contatore < 0) {
-            clearInterval(intervalId);
-            console.log("Tempo scaduto!");
-        }
-    }, 1000);
-}
+//         if (contatore < 0) {
+//             clearInterval(intervalId);
+//             console.log("Tempo scaduto!");
+//         }
+//     }, 1000);
+// }
 
-contoAllaRovescia(5);
+// contoAllaRovescia(5);
 
 /*
 🎯 Snack 9 (Bonus)
